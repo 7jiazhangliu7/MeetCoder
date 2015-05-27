@@ -1,0 +1,33 @@
+class Solution{
+       public void rotate(int[][] input, int n) {
+        if(input == null || n == 0) {
+                    return;
+            }
+ 
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j <= i; j++) {
+                if(i == j) continue;
+ 
+                int tmp = input[i][j];
+                input[i][j] = input[j][i];
+                input[j][i] = tmp;
+            }
+        }
+ 
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n/2; j++) {
+                int tmp = input[i][j];
+                input[i][j] = input[i][n-1-j];
+                input[i][n-1-j] = tmp;
+            }
+        }
+       }
+}
+/**************************************************************
+    Problem: 46
+    User: 77jiazhangliu77
+    Language: Java
+    Result: Accepted
+    Time:823 ms
+    Memory:37372 kb
+****************************************************************/
