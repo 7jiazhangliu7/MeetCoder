@@ -1,0 +1,25 @@
+class Solution{
+    public char[] reverse (char[] str){
+    if(str == null || str.length == 0) return str;
+     
+    int start = 0, end = str.length-1;
+     
+    while(start < end) {
+        char temp = str[start];
+        str[start] = str[end];
+        str[end] = temp;
+        start++;
+        end--;
+    }
+     
+    return str;
+    }
+}
+/**************************************************************
+    Problem: 44
+    User: 77jiazhangliu77
+    Language: Java
+    Result: Accepted
+    Time:115 ms
+    Memory:17844 kb
+****************************************************************/
