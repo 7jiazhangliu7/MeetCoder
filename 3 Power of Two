@@ -1,0 +1,15 @@
+class Solution {
+     public boolean isPowerOf2(int n) {
+        if(n <= 0) return false;
+         
+        return (n & (n-1)) == 0;
+        }   
+}
+/**************************************************************
+    Problem: 3
+    User: 77jiazhangliu77
+    Language: Java
+    Result: Accepted
+    Time:122 ms
+    Memory:18148 kb
+****************************************************************/
