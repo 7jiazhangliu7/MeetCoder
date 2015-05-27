@@ -1,0 +1,24 @@
+http://www.meetcoder.com/problem.php?id=2
+
+class Solution {
+    public boolean makePair(int [] a, int [] b, int k) {
+        if(a == null || b == null || a.length != b.length) return false;
+        Arrays.sort(a); Arrays.sort(b);
+         
+        for(int i = 0; i < a.length; i++) {
+            if(a[i] + b[b.length-i-1] < k) {
+                return false;
+            }
+        }
+         
+        return true;
+    }
+}
+/**************************************************************
+    Problem: 2
+    User: 77jiazhangliu77
+    Language: Java
+    Result: Accepted
+    Time:297 ms
+    Memory:25324 kb
+****************************************************************/
